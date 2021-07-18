@@ -1,0 +1,25 @@
+  <h1>Cart</h1>
+  <app-cart
+    [cartItems]="cartItems"
+    [cartTotal]="cartTotal"
+    [cartDiscount]="cartDiscount"
+    (cartItemDeleted)="onCartItemDeleted($event)"
+    (cartItemChanged)="onCartItemChanged($event)"
+    (cartCouponChanged)="onCartCouponChanged($event)"
+    >
+  </app-cart>
+
+  <h1>Children Books</h1>
+  <app-product 
+    [categoryId]=1
+    (cartUpdated)="onCartUpdated($event)"
+    >
+  </app-product>
+
+  <h1>Fiction Books</h1>
+  <app-product 
+    [categoryId]=2
+    (cartUpdated)="onCartUpdated($event)"
+    >
+  </app-product>
+
